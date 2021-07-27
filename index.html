@@ -8,15 +8,20 @@
 </head>
 <body>
     
-    <button>Create Coockie</button>
+    <button onclick="createCoockie('teste')">Create Coockie</button>
 
     <script>
         function createCoockie(value) {
+
+            alert("Coockie created!")
+
             var data = new Date()
 
             data.setTime(data.getTime() + 60000)
 
-            document.coockie = "cockieName=" + value + "; expires=" + data.toUTCString() + "; path=/"
+            document.coockie = "cockieName=" + value + "; expires=" + data.toUTCString()
+
+            console.log(document.coockie)
 
             return "Success!"
         }
