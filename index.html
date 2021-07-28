@@ -8,20 +8,20 @@
 </head>
 <body>
     
-    <button onclick="createCoockie('teste')">Create Coockie</button>
+    <button onclick="createCookie('teste')">Create Cookie</button>
 
     <script>
-        function createCoockie(value) {
-
-            alert("Coockie created!")
+        function createCookie(value) {
 
             var data = new Date()
 
             data.setTime(data.getTime() + 60000)
 
-            document.coockie = "cockieName=" + value + "; expires=" + data.toUTCString()
+            document.cookie = "cookieName=" + value + "; expires=" + data.toUTCString()
 
-            console.log(document.coockie)
+            alert("Cookie created!")
+
+            console.log(document.cookie)
 
             return "Success!"
         }
